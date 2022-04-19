@@ -1,27 +1,14 @@
 import "./Intro.scss";
 import person from "../../assets/person.png";
-import { useEffect, useRef } from "react";
-import { init } from "ityped";
+import Typewriter from "typewriter-effect";
 import {
   Facebook,
   Instagram,
   GitHub,
-  ArrowDownward
+  ArrowDownward,
 } from "@mui/icons-material";
 
-
-
 export default function Intro() {
-  const textRef = useRef();
-
-  useEffect(() => {
-    init(textRef.current, {
-      showCursor: false,
-      backDelay: 1500,
-      backSpeed:60,
-      strings: ["Developer", "Designer", "Content Creator"],
-    });
-  }, []);
   return (
     <div className="intro" id="intro">
       <div className="left">
@@ -34,7 +21,17 @@ export default function Intro() {
           <div className="introInfo">
             <h2>Hello, It's me</h2>
             <h1>Sabin Gautam</h1>
-            <h3>I am <span ref={textRef}></span></h3>
+            <h3>
+              I do<span>
+              <Typewriter
+            options={{
+              strings: ["Dveloping", "Designing", "Hosting "],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+              </span>
+            </h3>
           </div>
           <div className="IntroIcons">
             <div className="icon">
@@ -47,9 +44,10 @@ export default function Intro() {
               <GitHub />
             </div>
           </div>
-         <a href="#portfolio"><ArrowDownward className="downArrow" /></a> 
+          <a href="#portfolio">
+            <ArrowDownward className="downArrow" />
+          </a>
         </div>
-        
       </div>
     </div>
   );
