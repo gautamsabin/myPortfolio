@@ -1,2 +1,9 @@
-$primaryColor: rgb(58, 47, 47)
+$primaryColor: rgb(58, 47, 47);
 
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}
