@@ -1,30 +1,38 @@
 import "./Works.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import arrow from "../../assets/arrow.png";
 import { GitHub, ArrowDownward } from "@mui/icons-material";
+import axios from "axios";
 
 export default function Works() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const data = [
-    {
-      id: "1",
-      title: "Web Design",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      img: "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
-    },
-    {
-      id: "2",
-      title: "Mobile Application",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img: "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
-    },
-    {
-      id: "3",
-      title: "Branding",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img: "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
-    },
-  ];
+  // const data = [
+  //   {
+  //     id: "1",
+  //     title: "Web Design",
+  //     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+  //     img: "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
+  //   },
+  //   {
+  //     id: "2",
+  //     title: "Mobile Application",
+  //     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  //     img: "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
+  //   },
+  //   {
+  //     id: "3",
+  //     title: "Branding",
+  //     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  //     img: "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
+  //   },
+  // ];
+
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:8626/user/project/').then((response) => {
+      setData(response.data)
+    })
+  })
 
   const handleClick = (way) => {
     way === "left"
@@ -43,10 +51,10 @@ export default function Works() {
               <div className="left">
                 <div className="leftContainer">
                   <div className="imgContainer">
-                   <a href="#"><GitHub /></a> 
+                   <a href={d.link}><GitHub /></a> 
                   </div>
-                  <h2>{d.title}</h2>
-                  <p>{d.desc}</p>
+                  <h2>{d.name}</h2>
+                  <p>{d.description}</p>
                   <span>Projects</span>
                 </div>
               </div>
