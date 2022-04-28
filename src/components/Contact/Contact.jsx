@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./Contact.scss";
 import Button from "../Button/Button";
+import contact from '../../assets/contact-us.png'
+import axios from 'axios'
 
 export default function Contact() {
   const initialValues = { fullName: "", email: "", textarea: "" };
@@ -13,12 +15,25 @@ export default function Contact() {
     console.log(formValues);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     if (Object.keys(formErrors).length === 0) {
       setFormValues(formValues);
     }
+    console.log(formValues)
+    await axios.post('http://localhost:8626/user/contact/', {
+      name: formValues.fullName,
+      email: formValues.email,
+      message:formValues.textarea
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
   };
 
   const checkValidate = () => {
@@ -47,7 +62,7 @@ export default function Contact() {
   return (
     <div className="contact" id="contact">
       <div className="left">
-        <img src="assets/shake.svg" alt="" />
+        <img src={contact} alt="" />
       </div>
       <div className="right">
         <h2>Contact.</h2>
