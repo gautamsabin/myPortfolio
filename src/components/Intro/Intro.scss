@@ -1,75 +1,84 @@
 @import "../../styles/global.scss";
-.intro {
+.hero {
   background-color: $primaryColor;
-  display: flex;
-
-  .left {
-    flex: 0.5;
-    overflow: hidden;
-
-    .imageConatainer {
-      width: 700px;
-      height: calc(100vh - 70px);
-    }
-    img {
-      top: 20%;
-      width: 50vw;
-      height: 100vh;
-    }
-  }
-
-  .right {
-    flex: 0.5;
+  position: relative;
+  .container {
+    width: 100%;
     position: relative;
+  }
+}
+.hero__heading {
+  font-size: 2rem;
+  color: $secondaryColor;
+  position: absolute;
+  right: 20%;
+  align-items: center;
 
-    .wrapper {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-left: 50px;
+  span {
+    display: inline-block;
+    width: 100%;
+    margin-left: 10px;
+  }
+  .hero__name {
+    font-size: 4.5rem;
+    color: $secondaryColor;
+  }
+}
+.hero__img {
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid var(--gray-1);
+  margin-left: 300px;
+  margin-top: 40px;
+}
+.hero__info {
+  // margin-top: -18rem;
+  color: $secondaryColor;
+  position: absolute;
+  right: 35%;
+  bottom: 10%;
+  #button1 {
+    font-size: 2rem;
+    background-color: $secondaryColor;
+    padding: 0.4em 1.5em;
+    border: 2px solid var(--gray-1);
+    border-radius: 8px;
+    display: inline-block;
+    color: $primaryColor;
+    margin-left: 130px;
+  }
+  .paragraph {
+    max-width: 500px;
+    text-align: center;
+    font-size: 1.7rem;
+    line-height: 1.2em;
+    margin-left: 10px;
+  }
+}
 
-      h1 {
-        font-size: 60px;
-        margin: 10px 0;
-      }
+.hero__social {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  bottom: 20px;
+  width: 50px;
+}
+.hero__social {
+  left: 50px;
+}
 
-      h2 {
-        font-size: 35px;
-      }
+.hero__social__text {
+  ul {
+    li {
+      margin-bottom: 1rem;
+      a {
+        display: inline-block;
+        font-size: 1.6rem;
+        transform: rotate(-90deg);
+        letter-spacing: 5px;
 
-      h3 {
-        font-size: 30px;
-
-        span {
-          font-size: inherit;
-          color: crimson;
-        }
-      }
-
-      .IntroIcons {
-        display: flex;
-        // flex-direction: column;
-        align-items: center;
-
-        .icon {
-          display: flex;
-        }
-      }
-
-      .downArrow {
-        position: absolute;
-        bottom: 5%;
-        right: 38%;
-        color: crimson;
-        font-size: 40px;
-        animation: arrowBlink 2s infinite;
-      }
-      @keyframes arrowBlink {
-        100% {
-          opacity: 0;
-        }
+        color: $secondaryColor;
       }
     }
   }

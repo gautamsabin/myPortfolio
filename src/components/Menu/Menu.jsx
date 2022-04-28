@@ -1,5 +1,5 @@
 import './Menu.scss'
-import { Home, Article, ContactPage} from "@mui/icons-material";
+import { Home, Article, ContactPage, Analytics} from "@mui/icons-material";
 
 
 export default function Menu({menuOpen, setMenuOpen}) {
@@ -13,7 +13,7 @@ export default function Menu({menuOpen, setMenuOpen}) {
                 <a href='#portfolio' onClick={()=>{setMenuOpen(!menuOpen)}}><span><Article /></span>Portfolio</a>
             </li>
             <li>
-                <a href='#works' onClick={()=>{setMenuOpen(!menuOpen)}}>Works</a>
+                <a href='#works' onClick={()=>{setMenuOpen(!menuOpen)}}><Analytics/>Works</a>
             </li>
             <li>
                 <a href='#contact' onClick={()=>{setMenuOpen(!menuOpen)}}><span><ContactPage /></span>Contact</a>
