@@ -2,7 +2,7 @@
 
 .topbar {
   height: 40px;
-  background-color: rgb(240, 237, 231);
+  background-color:$secondaryColor;
   width: 100%;
   position: fixed;
   color: $primaryColor;
@@ -31,6 +31,10 @@
         display: flex;
         align-items: center;
         margin-left: 20px;
+        @include mobile{
+          display: none;
+        }
+
 
         .icon {
           font-size: 18px;
@@ -65,19 +69,19 @@
 
   &.active {
     background-color: $primaryColor;
-    color: wheat;
+    color: $secondaryColor;
 
     .toggleButton {
       span {
         &:first-child {
-          background-color: wheat;
+          background-color: $secondaryColor;
           transform: rotate(45deg);
         }
         &:nth-child(2) {
           display: none;
         }
         &:last-child {
-          background-color: wheat;
+          background-color: $secondaryColor;
           transform: rotate(-45deg);
         }
       }
