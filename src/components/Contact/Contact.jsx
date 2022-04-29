@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Contact.scss";
 import Button from "../Button/Button";
-import contact from '../../assets/contact-us.png'
-import axios from 'axios'
+import contact from "../../assets/contact-us.png";
+import axios from "axios";
 
 export default function Contact() {
   const initialValues = { fullName: "", email: "", textarea: "" };
@@ -21,19 +21,21 @@ export default function Contact() {
     if (Object.keys(formErrors).length === 0) {
       setFormValues(formValues);
     }
-    console.log(formValues)
-    await axios.post('http://localhost:8626/user/contact/', {
-      name: formValues.fullName,
-      email: formValues.email,
-      message:formValues.textarea
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-
+    console.log(formValues);
+    await axios
+      .post("http://localhost:8626/user/contact/", {
+        name: formValues.fullName,
+        email: formValues.email,
+        message: formValues.textarea,
+      })
+      .then(function (response) {
+        console.log(response);
+        // window.alert("Message send successfully")
+      })
+      .catch(function (error) {
+        console.log(error);
+        // window.alert("Message send failed")
+      });
   };
 
   const checkValidate = () => {
@@ -75,7 +77,7 @@ export default function Contact() {
             value={formValues.fullName}
             onBlur={checkValidate}
           />
-           <p>{formErrors.fullName}</p>
+          <p>{formErrors.fullName}</p>
           <input
             type="text"
             name="email"
@@ -84,7 +86,7 @@ export default function Contact() {
             value={formValues.email}
             onBlur={checkValidate}
           />
-           <p>{formErrors.email}</p>
+          <p>{formErrors.email}</p>
           <textarea
             placeholder="Message"
             name="textarea"
@@ -92,7 +94,7 @@ export default function Contact() {
             onChange={handleChange}
             onBlur={checkValidate}
           ></textarea>
-           <p>{formErrors.textarea}</p>
+          <p>{formErrors.textarea}</p>
           <Button type="submit" value="send" />
         </form>
       </div>

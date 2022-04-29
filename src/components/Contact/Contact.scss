@@ -36,8 +36,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-evenly;
-      border: solid 2px $secondaryColor;;
+      justify-content: center;
+      border: solid 2px $secondaryColor;
       border-radius: 10px;
 
       input {
@@ -45,6 +45,7 @@
         height: 30px;
         font-size: 14px;
         border-radius: 10px;
+        margin: 10px 0;
         @include mobile {
           width: 200px;
           height: 20px;
@@ -57,6 +58,7 @@
         font-size: 14px;
         border-radius: 10px;
         resize: none;
+        margin: 10px 0;
         @include mobile {
           width: 200px;
           height: 100px;
@@ -72,11 +74,11 @@
         height: 30px;
         color: white;
         background-color: $primaryColor;
-        border: none;
+        border: 1px solid $secondaryColor;
         border-radius: 10px;
         font-weight: 500;
         cursor: pointer;
-
+        margin: 10px 0;
         &:focus {
           outline: none;
         }

@@ -12,7 +12,7 @@ export default function Works() {
     axios.get("http://localhost:8626/user/project/").then((response) => {
       setData(response.data);
     });
-  },[setData]);
+  }, [setData]);
 
   const handleClick = (way) => {
     way === "left"
@@ -25,13 +25,13 @@ export default function Works() {
         className="slider"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
-        {data.map((d) => (
-          <div className="container">
+        {data.map((d, index) => (
+          <div key={index} className="container">
             <div className="item">
               <div className="left">
                 <div className="leftContainer">
                   <div className="imgContainer">
-                    <a href={d.link}>
+                    <a href={d.link} target="_blank" rel="noreferrer">
                       <GitHub />
                     </a>
                   </div>

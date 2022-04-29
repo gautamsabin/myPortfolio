@@ -11,8 +11,8 @@ export default function Intro() {
           </div>
           <div className="hero__info">
             <p className="paragraph">
-              I am working as a freelance web designer and developer for 4
-              years. I love to design and make new web experiences for the
+              I am working as a optimun web designer and developer for 1
+              month. I love to design and make new web experiences for the
               people.
             </p>
             <button id="button1">About Me</button>

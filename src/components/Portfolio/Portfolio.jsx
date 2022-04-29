@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import PortfolioList from "../PortfolioList/PortfolioList";
 import "./Portfolio.scss";
-import {
-  featuredPortfolio,
-  webPortfolio,
-} from '../../constant/data'
+import { featuredPortfolio, webPortfolio } from "../../constant/data";
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
@@ -18,7 +15,6 @@ export default function Portfolio() {
       id: "web",
       title: "Web App",
     },
-    
   ];
 
   useEffect(() => {
@@ -29,7 +25,7 @@ export default function Portfolio() {
       case "web":
         setData(webPortfolio);
         break;
-      
+
       default:
         setData(featuredPortfolio);
     }
@@ -39,8 +35,9 @@ export default function Portfolio() {
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
       <ul>
-        {list.map((item) => (
+        {list.map((item, index) => (
           <PortfolioList
+            key={index}
             title={item.title}
             active={selected === item.id}
             setSelected={setSelected}
@@ -49,12 +46,9 @@ export default function Portfolio() {
         ))}
       </ul>
       <div className="container">
-        {data.map((d) => (
-          <div className="item">
-            <img
-              src={d.img}
-              alt=""
-            />
+        {data.map((d, index) => (
+          <div key={index} className="item">
+            <img src={d.img} alt="" />
             <h3>{d.title}</h3>
           </div>
         ))}
