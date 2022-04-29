@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PortfolioList from "../PortfolioList/PortfolioList";
+import PortfolioList from "../../components/PortfolioList/PortfolioList";
 import "./Portfolio.scss";
 import { featuredPortfolio, webPortfolio } from "../../constant/data";
 
@@ -33,7 +33,7 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
+      <h1>Services</h1>
       <ul>
         {list.map((item, index) => (
           <PortfolioList

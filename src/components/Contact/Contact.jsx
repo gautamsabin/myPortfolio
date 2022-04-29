@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Contact.scss";
 import Button from "../Button/Button";
-import contact from "../../assets/contact-us.png";
+import contact from "../../assets/contactus.png";
 import axios from "axios";
 
 export default function Contact() {

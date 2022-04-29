@@ -1,22 +1,22 @@
 import './Menu.scss'
 import { Home, Article, ContactPage, Analytics} from "@mui/icons-material";
 
-
+import { Link } from 'react-router-dom';
 export default function Menu({menuOpen, setMenuOpen}) {
   return (
     <div className={"menu " +  (menuOpen && "active")}>
         <ul>
             <li>
-                <a href='#intro' onClick={()=>{setMenuOpen(!menuOpen)}}><Home />Home</a>
+                <Link to='/' onClick={()=>{setMenuOpen(!menuOpen)}}><Home />Home</Link>
             </li>
             <li>
-                <a href='#portfolio' onClick={()=>{setMenuOpen(!menuOpen)}}><span><Article /></span>Portfolio</a>
+                <Link to='/portfolio' onClick={()=>{setMenuOpen(!menuOpen)}}><span><Article /></span>Services</Link>
             </li>
             <li>
-                <a href='#works' onClick={()=>{setMenuOpen(!menuOpen)}}><Analytics/>Works</a>
+                <Link to='/works' onClick={()=>{setMenuOpen(!menuOpen)}}><Analytics/>Works</Link>
             </li>
             <li>
-                <a href='#contact' onClick={()=>{setMenuOpen(!menuOpen)}}><span><ContactPage /></span>Contact</a>
+                <Link to='/contact' onClick={()=>{setMenuOpen(!menuOpen)}}><span><ContactPage /></span>Contact</Link>
             </li>
         </ul>
     </div>

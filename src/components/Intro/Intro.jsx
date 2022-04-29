@@ -1,5 +1,5 @@
 import "./Intro.scss";
-import { Facebook, Instagram, Twitter, LinkedIn } from "@mui/icons-material";
+
 export default function Intro() {
   return (
     <div className="hero" id="intro">
@@ -19,48 +19,7 @@ export default function Intro() {
           </div>
         </div>
 
-        <div className="hero__social">
-          <div className="hero__social__text">
-            <ul>
-              <li>
-                <a
-                  href="https://www.facebook.com/sabin.gautam.7771/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Facebook />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://twitter.com/mesabin33"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Twitter />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/sabingautam007/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Instagram />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/sabin-gautam-8b033422b/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <LinkedIn />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        
       </div>
     </div>
   );

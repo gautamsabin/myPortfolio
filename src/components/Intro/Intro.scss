@@ -49,6 +49,7 @@
     border-radius: 8px;
     display: inline-block;
     color: $primaryColor;
+    margin-top: 12px;
   }
   .paragraph {
     width: 40%;
@@ -60,29 +61,4 @@
   }
 }
 
-.hero__social {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  position: absolute;
-  bottom: 20px;
-  width: 50px;
-}
-.hero__social {
-  left: 50px;
-}
 
-.hero__social__text {
-  ul {
-    li {
-      margin-bottom: 1rem;
-      a {
-        display: inline-block;
-        font-size: 1.6rem;
-        transform: rotate(-90deg);
-        letter-spacing: 5px;
-        color: $secondaryColor;
-      }
-    }
-  }
-}
