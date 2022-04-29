@@ -4,7 +4,7 @@ import "./Portfolio.scss";
 import {
   featuredPortfolio,
   webPortfolio,
-} from '../../data'
+} from '../../constant/data'
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");

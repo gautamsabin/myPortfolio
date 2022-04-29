@@ -1,7 +1,7 @@
 import "./Works.scss";
 import { useEffect, useState } from "react";
 import arrow from "../../assets/arrow.png";
-import { GitHub, ArrowDownward } from "@mui/icons-material";
+import { GitHub } from "@mui/icons-material";
 import axios from "axios";
 
 export default function Works() {
