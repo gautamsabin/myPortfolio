@@ -1,34 +1,30 @@
 import "./Intro.scss";
 import { Facebook, Instagram, Twitter, LinkedIn } from "@mui/icons-material";
-import hero from "../../assets/hero.png";
 export default function Intro() {
   return (
     <div className="hero" id="intro">
       <div className="container">
-      <div className="hero_heading">
-      <h1 className="hero__heading">
-          <span>Hello, This is</span>
-          <span className="hero__name">Sabin Gautam</span>
-        </h1>
-      </div>
-
         <div className="hero__img">
-          <img src={hero} alt="" />
+          <div className="hero_header">
+            <h2>Hello, This is</h2>
+            <h1>Sabin Gautam</h1>
+          </div>
+          <div className="hero__info">
+            <p className="paragraph">
+              I am working as a freelance web designer and developer for 4
+              years. I love to design and make new web experiences for the
+              people.
+            </p>
+            <button id="button1">About Me</button>
+          </div>
         </div>
-        <div className="hero__info">
-          <p className="paragraph">
-            I am working as a freelance web designer and developer for 4 years.
-            I love to design and make new web experiences for the people.
-          </p>
-          <button id="button1">About Me</button>
-        </div>
+
         <div className="hero__social">
-         
           <div className="hero__social__text">
             <ul>
               <li>
                 <a
-                  href="http://facebook.com/webcifar"
+                  href="https://www.facebook.com/sabin.gautam.7771/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -37,7 +33,7 @@ export default function Intro() {
               </li>
               <li>
                 <a
-                  href="http://twitter.com/webcifar"
+                  href="https://twitter.com/mesabin33"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -46,7 +42,7 @@ export default function Intro() {
               </li>
               <li>
                 <a
-                  href="http://isntagram.com/web_cifar"
+                  href="https://www.instagram.com/sabingautam007/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -54,7 +50,11 @@ export default function Intro() {
                 </a>
               </li>
               <li>
-                <a href="http://webcifar.com" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/sabin-gautam-8b033422b/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <LinkedIn />
                 </a>
               </li>
