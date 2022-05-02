@@ -1,5 +1,5 @@
 import "./Works.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import arrow from "../../assets/arrow.png";
 import { GitHub } from "@mui/icons-material";
 // import axios from "axios";
