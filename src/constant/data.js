@@ -63,3 +63,23 @@ export const webPortfolio = [
     img: "https://cdn.dribbble.com/users/387658/screenshots/15458608/media/e92ec1dd33dd1170ae3dc9c5272f2693.jpg?compress=1&resize=1200x900",
   },
 ];
+export const githubProject = [
+  {
+    id: 1,
+    name: "webPortfolio",
+    description:"This is the descriptioin of project",
+    link: "https://github.com/SabinGt",
+  },
+  {
+    id: 2,
+    name: "webPortfolio",
+    description:"This is the descriptioin of project",
+    link: "https://github.com/SabinGt",
+  },
+  {
+    id: 3,
+    name: "webPortfolio",
+    description:"This is the descriptioin of project",
+    link: "https://github.com/SabinGt",
+  }
+];
