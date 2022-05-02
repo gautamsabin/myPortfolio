@@ -2,22 +2,22 @@ import "./Works.scss";
 import { useEffect, useState } from "react";
 import arrow from "../../assets/arrow.png";
 import { GitHub } from "@mui/icons-material";
-import axios from "axios";
-
+// import axios from "axios";
+import {githubProject} from "../../constant/data"
 export default function Works() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axios.get("http://localhost:8626/user/project/").then((response) => {
-      setData(response.data);
-    });
-  }, [setData]);
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   axios.get("http://localhost:8626/user/project/").then((response) => {
+  //     setData(response.data);
+  //   });
+  // }, [setData]);
 
   const handleClick = (way) => {
     way === "left"
       ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
-      : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
+      : setCurrentSlide(currentSlide < githubProject.length - 1 ? currentSlide + 1 : 0);
   };
   return (
     <div className="works" id="works">
@@ -25,7 +25,7 @@ export default function Works() {
         className="slider"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
-        {data.map((d, index) => (
+        {githubProject.map((d, index) => (
           <div key={index} className="container">
             <div className="item">
               <div className="left">

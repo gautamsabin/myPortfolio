@@ -3,6 +3,8 @@ import "./Contact.scss";
 import Button from "../Button/Button";
 import contact from "../../assets/contactus.png";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
   const initialValues = { fullName: "", email: "", textarea: "" };
@@ -30,11 +32,12 @@ export default function Contact() {
       })
       .then(function (response) {
         console.log(response);
-        // window.alert("Message send successfully")
+        toast.success("Message send successfully");
+
+        setFormErrors(initialValues);
       })
       .catch(function (error) {
         console.log(error);
-        // window.alert("Message send failed")
       });
   };
 
@@ -96,6 +99,7 @@ export default function Contact() {
           ></textarea>
           <p>{formErrors.textarea}</p>
           <Button type="submit" value="send" />
+          <ToastContainer />
         </form>
       </div>
     </div>
