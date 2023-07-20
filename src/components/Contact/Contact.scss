@@ -1,0 +1,96 @@
+@import "../../styles/global.scss";
+.contact {
+  background-color: $primaryColor;
+  display: flex;
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 70%;
+      width: 80%;
+      border-radius: 10px;
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 30px;
+      color: $secondaryColor;
+    }
+
+    form {
+      width: 70%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: solid 2px $secondaryColor;
+      border-radius: 10px;
+
+      input {
+        width: 300px;
+        height: 30px;
+        font-size: 14px;
+        border-radius: 10px;
+        margin: 10px 0;
+        @include mobile {
+          width: 200px;
+          height: 20px;
+        }
+      }
+
+      textarea {
+        width: 300px;
+        height: 80px;
+        font-size: 14px;
+        border-radius: 10px;
+        resize: none;
+        margin: 10px 0;
+        @include mobile {
+          width: 200px;
+          height: 100px;
+        }
+      }
+      p {
+        color: red;
+        font-size: 12px;
+      }
+
+      button {
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: $primaryColor;
+        border: 1px solid $secondaryColor;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        margin: 10px 0;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          color: $primaryColor;
+          background-color: rgb(194, 160, 160);
+        }
+      }
+
+      span {
+        color: green;
+      }
+    }
+  }
+}

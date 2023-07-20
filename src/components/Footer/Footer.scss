@@ -1,0 +1,36 @@
+@import "../../styles/global.scss";
+.footer {
+  height: 40px;
+  background-color: rgb(53, 48, 48);
+  z-index: 4;
+  position: relative;
+  
+}
+.left{
+    .footer_copyright{
+     color: $secondaryColor;   
+    }
+    a{
+        text-decoration: none;
+        color: $secondaryColor;
+    }
+}
+.hero__social {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  ul {
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    li {
+        padding: 5px 20px;
+      a {
+        letter-spacing: 5px;
+        color: $secondaryColor;
+      }
+    }
+  }
+}

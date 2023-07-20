@@ -1,0 +1,64 @@
+@import "../../styles/global.scss";
+.hero {
+  background-color: $primaryColor;
+
+  .container {
+    width: 100%;
+  }
+}
+
+.hero__img {
+  width: 100%;
+  height: 90vh;
+  margin: 0 auto;
+  border: 2px solid var(--gray-1);
+  text-align: center;
+  background-image: url("../../assets/hero.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @include mobile {
+    height: 90vh;
+    width: 80%;
+  }
+  .hero_header {
+    color: $secondaryColor;
+    height: 200px;
+    h2 {
+      font-size: 1.7rem;
+      line-height: 1.2em;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+.hero__info {
+  color: $secondaryColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  #button1 {
+    font-size: 1.4rem;
+    background-color: $secondaryColor;
+    padding: 0.4em 1.5em;
+    border: 2px solid var(--gray-1);
+    border-radius: 8px;
+    display: inline-block;
+    color: $primaryColor;
+    margin-top: 12px;
+  }
+  .paragraph {
+    width: 40%;
+    font-size: 1.7rem;
+    line-height: 1.2em;
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+
